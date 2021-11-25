@@ -34,11 +34,6 @@ def clean_df(df: pd.DataFrame, min_price: float, max_price: float) -> pd.DataFra
 
     # Convert last_review to datetime
     df['last_review'] = pd.to_datetime(df['last_review'])
-
-    # Remove outliers based on longitude and latitude
-    idx = df['longitude'].between(-74.25, -
-                                  73.50) & df['latitude'].between(40.5, 41.2)
-    df = df[idx].copy()
     return df
 
 

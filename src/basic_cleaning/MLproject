@@ -22,11 +22,11 @@ entry_points:
 
       min_price:
         description: Price lower-bound that defines inliers.
-        type: string
+        type: float
 
       max_price:
         description: Price upper-bound that defines inliers.
-        type: string
+        type: float
 
     command: >-
       python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price}
